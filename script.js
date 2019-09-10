@@ -54,8 +54,8 @@ for (const [key, value] of url.searchParams.entries()) {
     console.log(key, value);
 }
 
-const region = url.searchParams.get("region");
-const nombre = url.searchParams.get("nombre");
+const region = url.searchParams.get("region").lowercase();
+const nombre = url.searchParams.get("nombre").lowercase();
 
 const provinciasFiltradas = provincias.filter(p => {
     if (nombre) {
@@ -68,3 +68,7 @@ const provinciasFiltradas = provincias.filter(p => {
 
 var str = JSON.stringify(provinciasFiltradas, undefined, 4);
 output(syntaxHighlight(str));
+
+// agregar comparacion entre queryparams y region/nombre sin casing
+// agregar soporte a region "todas"
+// relacionar bugs aca con los bugs del frontend
