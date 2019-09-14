@@ -54,17 +54,24 @@ for (const [key, value] of url.searchParams.entries()) {
     console.log(key, value);
 }
 
-const region = url.searchParams.get("region").lowercase();
-const nombre = url.searchParams.get("nombre").lowercase();
+const region = url.searchParams.get("region");
+const nombre = url.searchParams.get("nombre");
 
-const provinciasFiltradas = provincias.filter(p => {
-    if (nombre) {
-	return p.region.match(region) && p.name.match(nombre);
-    } else {
-	return p.region.match(region);
-    }
-});
+const provinciasFiltradas = provincias.filter(cumpleLaRegion).filter(cumpleElNombre);
 
+function cumpleLaRegion(p) {
+    if (!region || region.match(/Todas/i)) return true;
+
+    var regex = new RegExp(region, 'i');
+    return regex.test(p.region);
+}
+
+function cumpleElNombre(p) {
+    if (!nombre) return true;
+    
+    var regex = new RegExp(nombre, 'i');
+    return regex.test(p.name);
+}
 
 var str = JSON.stringify(provinciasFiltradas, undefined, 4);
 output(syntaxHighlight(str));

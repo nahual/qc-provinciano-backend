@@ -7,30 +7,56 @@
     </head>
     <body>
 	<h1>Especificaciones Provinciano Backend</h1>
-	<p>Backend para buscar informacion de las provincias argentinas.</p>
+	<p><strong>Servicio</strong> para buscar informacion de las provincias argentinas.</p>
 	<h2>API</h2>
 	<ul>
 	    <li>
-		<div>
+		<div style="font-family: Mono">
 		    <strong>GET</strong> https://sanadora.github.io/qc-provinciano-backend/index.html
 		</div>
 		<div>
-		    Query String
 		    <ul>
 			<li>
-			    Parametro <strong>region</strong>: para filtrar por las provincias que pertenecen a esa region.
-			    <div>
-				Valores posibles:
-				<ul>
-				    <li>Centro</li>
-				    <li>Norte Grande Argentino</li>
-				    <li>Nuevo Cuyo</li>
-				    <li>Patagonica</li>
-				    <li>Ninguna</li>
-				</ul>
-			    </div>
+			    Query String
+			    <ul>
+				<li>
+				    Parametro <strong>region</strong>: para filtrar por las provincias que pertenecen a esa region.
+				    <div>
+					Valores posibles:
+					<ul>
+					    <li>Centro</li>
+					    <li>Norte Grande Argentino</li>
+					    <li>Nuevo Cuyo</li>
+					    <li>Patagonica</li>
+					    <li>Ninguna</li>
+					</ul>
+				    </div>
+				</li>
+				<li>Parametro <strong>nombre</strong>: para filtrar por provincias cuyo nombre coincide con lo especificado.</li>
+			    </ul>
 			</li>
-			<li>Parametro <strong>nombre</strong>: para filtrar por provincias cuyo nombre coincide con lo especificado.</li>
+			<li>
+			    Resultado
+			    <p>Lista de provincias que cumplen el criterio de busqueda</p>
+			    <p>Cada provincia cumple con la siguiente estructura:</p>
+			    <ul>
+				<li>
+				    <strong>region:</strong> Región a la que pertenece
+				</li>
+				<li>
+				    <strong>name:</strong> Nombre de la provincia
+				</li>
+				<li>
+				    <strong>capital:</strong> Su capital
+				</li>
+				<li>
+				    <strong>inhabitants:</strong> Cantidad de habitantes
+				</li>
+				<li>
+				    <strong>area:</strong> superficie, en kilometros cuadrados
+				</li>
+			    </ul>
+			</li>
 		    </ul>
 		</div>
 	    </li>
