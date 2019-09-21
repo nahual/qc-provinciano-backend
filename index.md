@@ -8,10 +8,10 @@
 
 ### Query String
 
-1) Parametro **region**: para filtrar por las provincias cuya region contiene lo especificado.
-	Valor **especial**: `Todas`. Si se especifica `Todas` como region, se obtienen **todas las provincias** (pueden a su vez ser filtradas por el campo `nombre`).
+* Parametro **region**: para filtrar por las provincias cuya region contiene lo especificado.
+  Valor **especial**: `Todas`. Si se especifica `Todas` como region, se obtienen **todas las provincias** (pueden a su vez ser filtradas por el campo `nombre`).
 	
-2) Parametro **nombre**: para filtrar por provincias cuyo nombre contiene lo especificado.
+* Parametro **nombre**: para filtrar por provincias cuyo nombre contiene lo especificado.
 	
 ### Resultado
 	
