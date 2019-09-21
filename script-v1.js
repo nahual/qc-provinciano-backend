@@ -57,7 +57,7 @@ for (const [key, value] of url.searchParams.entries()) {
 const region = url.searchParams.get("region");
 const nombre = url.searchParams.get("nombre");
 
-const provinciasFiltradas = provincias.filter(cumpleLaRegion).filter(cumpleElNombre);
+const provinciasFiltradas = provincias.filter(cumpleLaRegion).filter(cumpleElNombre).map(cambiarCantidadDeHabitantes);
 
 function cumpleLaRegion(p) {
     if (!region || region.match(/Todas/i)) return true;
@@ -66,11 +66,14 @@ function cumpleLaRegion(p) {
     return regex.test(p.region);
 }
 
+// BUG 1: se ignora el filtro de nombre de provincia
 function cumpleElNombre(p) {
-    if (!nombre) return true;
-    
-    var regex = new RegExp(nombre, 'i');
-    return regex.test(p.name);
+    return true;
+}
+
+// BUG 2: se cambia la cantidad de habitantes de la provincia
+function cambiarCantidadDeHabitantes(p) {
+    return {...p, habitantes: 0};
 }
 
 var str = JSON.stringify(provinciasFiltradas, undefined, 4);

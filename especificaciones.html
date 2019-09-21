@@ -17,7 +17,7 @@
 		<div>
 		    <ul>
 			<li>
-			    Query String
+			    <h3>Query String</h3>
 			    <ul>
 				<li>
 				    Parametro <strong>region</strong>: para filtrar por las provincias que pertenecen a esa region.
@@ -36,9 +36,9 @@
 			    </ul>
 			</li>
 			<li>
-			    Resultado
+			    <h3>Resultado</h3>
 			    <p>Lista de provincias que cumplen el criterio de busqueda</p>
-			    <p>Cada provincia cumple con la siguiente estructura:</p>
+			    <p>Cada provincia esta formada por los campos:</p>
 			    <ul>
 				<li>
 				    <strong>region:</strong> Región a la que pertenece
@@ -56,6 +56,26 @@
 				    <strong>area:</strong> superficie, en kilometros cuadrados
 				</li>
 			    </ul>
+			</li>
+			<li>
+			    <h3>Ejemplos</h3>
+			    <ul>
+				<li>
+				    GET https://sanadora.github.io/qc-provinciano-backend/index.html?<strong>region=Todas</strong></a>
+				    <p>Para obtener todas las provincias</p>
+				</li>
+				<li>
+				    GET https://sanadora.github.io/qc-provinciano-backend/index.html?<strong>region=cuyo</strong>
+				    <p>Para obtener las provincias de Nuevo Cuyo</p>
+				</li>
+				<li>
+				    GET https://sanadora.github.io/qc-provinciano-backend/index.html?<strong>region=cuyo&name=oza</strong>
+				    <p>Para obtener las provincias de Nuevo Cuyo que en su nombre tiene "oza" (solo Mendoza)</p>
+				</li>				
+			    </ul>
+			</li>
+			<li>
+			    La información debe ser equivalente a la disponible en la entrada "Provincias de Argentina" de wikipedia (<a href="http://es.wikipedia.org/wiki/Provincias_de_Argentina">http://es.wikipedia.org/wiki/Provincias_de_Argentina</a>).
 			</li>
 		    </ul>
 		</div>
