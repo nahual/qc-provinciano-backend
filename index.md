@@ -26,11 +26,11 @@ Cada provincia esta formada por los campos:
 	
 ### Ejemplos
 
-* GET [https://sanadora.github.io/qc-provinciano-backend/index.html?**region=Todas**](https://sanadora.github.io/qc-provinciano-backend/index.html?region=Todas)
+* GET sanadora.github.io/qc-provinciano-backend/index.html?**region=Todas**
   Para obtener todas las provincias
-* GET [https://sanadora.github.io/qc-provinciano-backend/index.html?**region=cuyo**](https://sanadora.github.io/qc-provinciano-backend/index.html?region=cuyo)
+* GET sanadora.github.io/qc-provinciano-backend/index.html?**region=cuyo**
   Para obtener las provincias de Nuevo Cuyo
-* GET [https://sanadora.github.io/qc-provinciano-backend/index.html?**region=cuyo&name=oza**](https://sanadora.github.io/qc-provinciano-backend/index.html?region=cuyo&name=oza)
+* GET sanadora.github.io/qc-provinciano-backend/index.html?**region=cuyo&name=oza**
   Para obtener las provincias de Nuevo Cuyo que en su nombre tiene "oza" (solo Mendoza)
   
 La información debe ser equivalente a la disponible en la entrada "Provincias de Argentina" de wikipedia (http://es.wikipedia.org/wiki/Provincias_de_Argentina).

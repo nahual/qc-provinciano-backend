@@ -73,7 +73,7 @@ function cumpleElNombre(p) {
 
 // BUG 2: se cambia la cantidad de habitantes de la provincia
 function cambiarCantidadDeHabitantes(p) {
-    return {...p, habitantes: 0};
+    return {...p, inhabitants: 0};
 }
 
 var str = JSON.stringify(provinciasFiltradas, undefined, 4);
